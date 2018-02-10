@@ -23,7 +23,7 @@ function xhr(url, params, callback, data, x) {
 
         var dataStr = '';
         Object.keys(data).forEach(function(key) {
-            dataStr += key + data[key] + '&';
+            dataStr += key + '=' + data[key] + '&';
         });
 
         console.log('xhr send', dataStr);
