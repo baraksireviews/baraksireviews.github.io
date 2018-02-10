@@ -26,6 +26,7 @@ function xhr(url, params, callback, data, x) {
             dataStr += key + data[key] + '&';
         });
 
+        console.log('xhr send', dataStr);
         x.send(dataStr)
     } catch (e) {
         callback(new Error('exception caught ' + e));
