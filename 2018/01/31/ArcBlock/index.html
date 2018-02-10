@@ -253,7 +253,7 @@
 
         var x;
 
-        xhr('https://formspree.io/baraksireviews@gmail.com', null, function(err, res) {
+        xhr('https://formspree.io/baraksireviews@gmail.com', { withCredentials: true }, function(err, res) {
             if (err !== null) {
                 elem.parentElement.setAttribute('data-state', 'error');
             }
