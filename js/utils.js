@@ -20,6 +20,12 @@ function xhr(url, params, callback, data, x) {
 
             }
         };
+
+        var dataStr = '';
+        Object.keys(data).forEach(function(key) {
+            dataStr += key + data[key] + '&';
+        });
+
         x.send(data)
     } catch (e) {
         callback(new Error('exception caught ' + e));
