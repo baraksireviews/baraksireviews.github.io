@@ -8,7 +8,7 @@ function xhr(url, params, callback, data, x) {
         x.open(data ? 'POST' : 'GET', url, 1);
         x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         x.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        x.setRequestHeader('Accept', 'application/json; charset=utf-8');
+        x.setRequestHeader('Accept', 'application/json');
         x.onreadystatechange = function () {
             if (x.readyState > 3 && callback) {
                 if (x.status === 200) {
